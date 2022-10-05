@@ -23,6 +23,19 @@ app.use('/api/users', users);
 app.use(express.static(__dirname+'/Frontend/build'));
 app.get('*', (req, res) => {res.sendFile(__dirname+'/Frontend/build/index.html')});
 
+if(process.env.NODE_ENV === "production")
+{
+    app.use(express.static(path.join(__dirname,'/Frontend/build')))
+
+    app.get('*',(req,res) =>{
+      res.sendFile(path.join(__dirname,'Frontend','build','index.html'));
+    });
+}else{
+    app.get('/',(req,res) =>{
+        res.send("Api running");
+    });
+}
+
 const port = process.env.PORT || 8082;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
