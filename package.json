@@ -1,5 +1,5 @@
 {
-  "name": "Software_Practice_Empirical_Evidence_Database",
+  "name": "software_practice_empirical_evidence_database",
   "version": "1.0.0",
   "description": "ENSE701_Stream51_Group1_Assignment1B",
   "main": "index.js",
@@ -32,5 +32,6 @@
   "devDependencies": {
     "eslint-config-react-app": "^7.0.1",
     "nodemon": "^1.19.1"
-  }
+  },
+  "keywords": []
 }
