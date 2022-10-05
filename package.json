@@ -1,10 +1,11 @@
 {
   "name": "Software_Practice_Empirical_Evidence_Database",
   "version": "1.0.0",
-  "description": "ENSE701_Stream51_Group1_Assignment1B", 
+  "description": "ENSE701_Stream51_Group1_Assignment1B",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "build": "cd Frontend && npm run build",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Frontend && npm run build --prefix Frontend"
@@ -29,9 +30,7 @@
     "validation": "0.0.1"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^7.0.1",
     "nodemon": "^1.19.1"
-  },
-  "engines":{
-    "node":"16.x"
-    }
+  }
 }

@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "eslint": "^7.25.0",
     "lint": "^1.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -39,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-react-app": "^7.0.1"
   }
 }
