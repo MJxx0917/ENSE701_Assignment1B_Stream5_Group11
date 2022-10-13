@@ -15,8 +15,58 @@ class SubmitArticle extends Component {
       doi:'',
       process_status:'',
       article_text:'',
-      keywords:''
+      keywords:'',
+      titleError:'',
+      authorError:'',
+      yobError:'',
+      journalError:'',
+      volumeError:'',
+      doiError:''
     };
+  }
+
+  validate = () =>
+  {
+    let titleError = "";
+    let authorError = "";
+    let yobError = "";
+    let journalError = "";
+    let volumeError = "";
+    let doiError = "";
+
+    if(!this.state.title)
+    {
+      titleError = 'Title cannot be empty!';
+    }
+    if(!this.state.author)
+    {
+      authorError = 'Author cannot be empty!';
+    }
+    if(!this.state.year_of_pub)
+    {
+      yobError = 'You must type the year of publish!';
+    }
+    if(!this.state.journal_name)
+    {
+      journalError = 'Please enter the journal name!';
+    }
+    if(!this.state.volume_number)
+    {
+      volumeError = 'Volume number is required!';
+    }
+    if(!this.state.doi)
+    {
+      doiError = 'DOI must be provided!';
+    }
+    
+
+    if(titleError || authorError || yobError || journalError || volumeError || doiError)
+    {
+      this.setState({titleError, authorError, yobError, journalError, volumeError, doiError});
+      return false;
+    }
+
+    return true;
   }
 
   onChange = e => {
@@ -26,6 +76,11 @@ class SubmitArticle extends Component {
   //When submitting article, store its details and set its status to PendingModeration
   onSubmit = e => {
     e.preventDefault();
+    const isVaild = this.validate();
+    if(isVaild)
+    {
+      console.log(this.state);
+    }
 
     const data = {
       title: this.state.title,
@@ -60,6 +115,7 @@ class SubmitArticle extends Component {
       })
   };
 
+
   render() {
     return (
       <div className="SubmitArticle">
@@ -70,7 +126,6 @@ class SubmitArticle extends Component {
               <p className="lead text-center">
                   Add Biblio Details
               </p>
-
               <form noValidate onSubmit={this.onSubmit}>
                 <br />
                 <div className='form-group'>
@@ -81,7 +136,11 @@ class SubmitArticle extends Component {
                     className='form-control'
                     value={this.state.title}
                     onChange={this.onChange}
+                    id = "aTitle" onSubmit="vaildateTitle()"
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.titleError}
+                  </div>
                 </div>
 
                 <div className='form-group'>
@@ -93,6 +152,9 @@ class SubmitArticle extends Component {
                     value={this.state.author}
                     onChange={this.onChange}
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.authorError}
+                  </div>
                 </div>
 
                 <div className='form-group'>
@@ -104,6 +166,9 @@ class SubmitArticle extends Component {
                     value={this.state.year_of_pub}
                     onChange={this.onChange}
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.yobError}
+                  </div>
                 </div>
 
                 <div className='form-group'>
@@ -115,7 +180,11 @@ class SubmitArticle extends Component {
                     value={this.state.journal_name}
                     onChange={this.onChange}
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.journalError}
+                  </div>
                 </div>
+
                 <div className='form-group'>
                   <input //Volume Number
                     type='number'
@@ -125,6 +194,9 @@ class SubmitArticle extends Component {
                     value={this.state.volume_number}
                     onChange={this.onChange}
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.volumeError}
+                  </div>
                 </div>
                 
                 <div className='form-group'>
@@ -136,16 +208,20 @@ class SubmitArticle extends Component {
                     value={this.state.doi}
                     onChange={this.onChange}
                   />
+                  <div style = {{color: 'red'}}>
+                    {this.state.doiError}
+                  </div>
                 </div>
                 <input //Submit button
                     type="submit"
                     className="btn btn-primary"
                 />
               </form>
+              
               <div className="col-md-8 m-auto">
               <br />
-              <Link to="/" className="btn btn-outline-warning btn-block mt-4">
-                  Return to Menu
+              <Link to="/main-menu-user" className="btn btn-outline-warning btn-block mt-4">
+                  Return to Menu for User
               </Link>
             </div>
           </div>
