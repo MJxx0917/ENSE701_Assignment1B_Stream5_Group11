@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const ArticleCard = (props) => {
+const AnalystCard = (props) => {
     const article  = props.article;
 
     //Create a card for the article that includes a link to its moderation page, analysis page, and show its detials on it
@@ -13,8 +13,8 @@ const ArticleCard = (props) => {
                 
                 <div className="links">
                 <h2>
-                    <Link to={`/show-article/${article._id}`}>
-                        { "Moderation" }
+                    <Link to={`/edit-article/${article._id}`}>
+                        { "Analyst" }
                     </Link>
                 </h2>
                 </div>
@@ -26,4 +26,4 @@ const ArticleCard = (props) => {
     )
 };
 
-export default ArticleCard;
+export default AnalystCard;

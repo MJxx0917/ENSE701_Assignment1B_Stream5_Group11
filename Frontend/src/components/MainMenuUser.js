@@ -29,6 +29,7 @@ class MainMenuUser extends Component{
                     Submit Article
                 </Link>
             </div>
+            
             <p className="lead text-center">
                  You can search articles that you pushed
               </p>
