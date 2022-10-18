@@ -55,7 +55,7 @@ class ShowArticleList extends Component {
           </div>
           <div className="rowC">
                 <Link to="/" className="btn btn-outline-warning">
-                  Back to Search
+                  Return to Menu
                 </Link>
             </div>
         </div>

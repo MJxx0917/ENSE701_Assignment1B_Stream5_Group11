@@ -88,29 +88,60 @@ class UpdateArticleInfo extends Component {
 
           <div className="col-md-8 m-auto">
           <form noValidate onSubmit={this.onSubmit}>
+          <p className="lead text-center">
+                 (1) Does the title meet the requirements?
+              </p>
             <div className='form-group'>
               <input //Keywords to be added
                 type='text'
-                placeholder='Keywords'
-                name='keywords'
+                placeholder='Yes/No'
+                name='Judge'
                 className='form-control'
                 value={this.state.keywords}
                 onChange={this.onChange}
               />
             </div>
-
+            <p className="lead text-center">
+                 (2) Does the author match the title?
+              </p>
            <div className='form-group'>
               <input //Article text to be added
-                placeholder='Analysis of article'
-                name='analysis'
+                placeholder='Yes/No'
+                name='Judge'
                 className='form-control'
                 value = {this.state.Analysis}
                 onChange={this.onChange}
               />
             </div>
-
+            <p className="lead text-center">
+                 (3) Is the year of publication correct?
+              </p>
+           <div className='form-group'>
+              <input 
+                placeholder='Yes/No'
+                name='Judge'
+                className='form-control'
+                value = {this.state.year_of_pub}
+                onChange={this.onChange}
+              />
+            </div>
+            <p className="lead text-center">
+                 (4) Does the DOI conflict with the data in the database?
+              </p>
+           <div className='form-group'>
+              <input 
+                placeholder='Yes/No'
+                name='Judge'
+                className='form-control'
+                value = {this.state.doi}
+                onChange={this.onChange}
+              />
+            </div>
+            <p className="lead text-center">
+                 (5) Comments for analysis articles
+              </p>
             <div className='form-group'>
-              <textarea //Article text to be added
+              <textarea 
                 placeholder='Article Text'
                 name='article_text'
                 className='form-control'
@@ -118,12 +149,18 @@ class UpdateArticleInfo extends Component {
                 onChange={this.onChange}
               />
             </div>
-            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Submit Article</button>
-            
+            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Allow articles to enter the database</button>
+            <div className="col-md-8 m-auto">
+              <br />
+              <Link to="/moderation" className="btn btn-outline-info btn-lg btn-block">
+                  Deny articles to the database 
+              </Link>
+            </div>
+
             <div className="col-md-8 m-auto">
               <br />
               <Link to="/analyst" className="btn btn-outline-info btn-lg btn-block">
-                  Return to Analyst {/* Link back to Analyst Page */}
+                  Return to Analyst 
               </Link>
             </div>
             </form>

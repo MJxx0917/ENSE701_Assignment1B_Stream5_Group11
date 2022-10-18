@@ -10,6 +10,7 @@ import Analyst from './components/Analyst';
 import SearchArticle from './components/SearchArticle'
 import SearchArticleDetails from './components/SearchArticleDetails'
 import ArticleResult from './components/ArticleResult';
+import MainMenu from './components/MainMenu';
 
 class App extends Component {
   render() {
@@ -23,7 +24,8 @@ class App extends Component {
           <Route path='/moderation' component={ShowArticleList} />
           <Route path='/submit-article' component={SubmitArticle} />
           <Route path='/analyst' component={Analyst} />
-          <Route exact path='/' component={SearchArticle} />
+          <Route path='/search-article' component={SearchArticle} />
+          <Route exact path='/' component={MainMenu} />
         </div>
       </Router>
     );

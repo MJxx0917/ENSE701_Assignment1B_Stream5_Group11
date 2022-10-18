@@ -145,7 +145,7 @@ class SubmitArticle extends Component {
               <div className="col-md-8 m-auto">
               <br />
               <Link to="/" className="btn btn-outline-warning btn-block mt-4">
-                  Return to Search
+                  Return to Menu
               </Link>
             </div>
           </div>

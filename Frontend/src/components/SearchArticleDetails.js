@@ -69,7 +69,7 @@ class SearchArticleDetails extends Component {
             <div className="col-md-10 m-auto">
               <br /> <br />
               <Link to={{pathname: `${this.props.location.state.prevPath}`, state: this.props.location.state.inputQuery}} className="btn btn-outline-warning float-left">
-                  Back to Search {/* Return to search page */}
+                  Return to Menu
               </Link>
             </div>
             <br />

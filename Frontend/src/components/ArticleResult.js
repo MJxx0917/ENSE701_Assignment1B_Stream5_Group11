@@ -73,26 +73,12 @@ class ArticleResult extends Component {
 
             {/* Navigation Bar */}
             <div className="rowC">
-                <Link to="/submit-article" className="btn btn-outline-warning">
-                  Submit An Article
-                </Link>
-
                 <Link to="/" className="btn btn-outline-warning">
-                  Search for Article
-                </Link>
-
-                <Link to="/moderation" className="btn btn-outline-warning">
-                  Moderation
-                </Link>
-
-                <Link to="/analyst" className="btn btn-outline-warning">
-                  Analyst
+                  Return to Menu
                 </Link>
             </div>
           </div>
           <br/>
-
-          {/* Call to render table */}
           <div className="tableList">
               <table id="articles">
                 <tbody>
