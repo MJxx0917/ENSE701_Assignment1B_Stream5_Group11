@@ -3,7 +3,7 @@
   "version": "1.0.0",asdf
   "description": "ENSE701_Stream51_Group1_Assignment1B", asdf
   "main": "index.js",
-  "scripts": {asdf
+  "scripts": {
     "start": "node app.js",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
