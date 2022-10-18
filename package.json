@@ -28,7 +28,7 @@
     "mongoose": "^5.5.15",
     "validation": "0.0.1"asdf
   },
-  "devDependencies": {asdf
+  "devDependencies": {
     "nodemon": "^1.19.1"
   }
 }
