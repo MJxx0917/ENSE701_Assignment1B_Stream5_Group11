@@ -8,7 +8,7 @@
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd Frontend && npm install && npm run build"
-  },d'r'f'g
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MJxx0917/ENSE701_Assignment1B_Stream5_Group11.git"
