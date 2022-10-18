@@ -10,7 +10,8 @@ class SearchArticle extends Component {
       title:'',
       author:'',
       year:'',
-      journal_name:''
+      journal_name:'',
+      searchError: ''
     };
   }
 
@@ -69,7 +70,7 @@ class SearchArticle extends Component {
 
   render() {
     return (
-      <div className="UpdateArticleInfo">
+      <div className="SearchArticle">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -92,6 +93,7 @@ class SearchArticle extends Component {
                 className='form-control'
                 onChange={this.onChange}
               />
+
               <br/>
               <input //title
                 type='text'
@@ -134,8 +136,8 @@ class SearchArticle extends Component {
             </form>
             <br/>
             <div className="rowC">
-            <Link to="/" className="btn btn-outline-warning">
-                Return to Menu
+            <Link to="/main-menu-user" className="btn btn-outline-warning">
+                Return to Menu for User
             </Link>
           </div>
           <br/>

@@ -11,9 +11,13 @@ import SearchArticle from './components/SearchArticle'
 import SearchArticleDetails from './components/SearchArticleDetails'
 import ArticleResult from './components/ArticleResult';
 import MainMenu from './components/MainMenu';
+import ShowApprovedArticles from './components/ShowApprovedArticles';
+import MainMenuUser from './components/MainMenuUser';
+import MenuOption from './components/MenuOption';
 
 class App extends Component {
   render() {
+    
     return (
       <Router>
         <div>
@@ -25,7 +29,10 @@ class App extends Component {
           <Route path='/submit-article' component={SubmitArticle} />
           <Route path='/analyst' component={Analyst} />
           <Route path='/search-article' component={SearchArticle} />
-          <Route exact path='/' component={MainMenu} />
+          <Route path='/approved' component={ShowApprovedArticles} />
+          <Route path='/mainmenu' component={MainMenu} />
+          <Route path='/main-menu-user' component={MainMenuUser} />
+          <Route exact path='/' component={MenuOption} />
         </div>
       </Router>
     );

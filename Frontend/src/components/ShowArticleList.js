@@ -51,11 +51,11 @@ class ShowArticleList extends Component {
           <br/>
 
           <div className="list">
-                {articleList} {/* Display the reutrned articles */}
+                {articleList} 
           </div>
           <div className="rowC">
-                <Link to="/" className="btn btn-outline-warning">
-                  Return to Menu
+                <Link to="/mainmenu" className="btn btn-outline-warning">
+                  Return to Menu for Administrator
                 </Link>
             </div>
         </div>

@@ -54,8 +54,8 @@ class Analyst extends Component {
                 {articleList} {/* Display the articles found */}
           </div>
           <div className="rowC">
-                <Link to="/" className="btn btn-outline-warning">
-                  Return to Menu
+                <Link to="/mainmenu" className="btn btn-outline-warning">
+                  Return to Menu for Administrator
                 </Link>
             </div>
         </div>
